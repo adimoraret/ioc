@@ -27,7 +27,3 @@ describe('get current temperature unit tests', () => {
     expect(isLogCalled).to.equal(true);
   });
 });
-
-describe('get current temperature integration tests', () => {
-  
-});
