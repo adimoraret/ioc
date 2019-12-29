@@ -3,7 +3,7 @@
 This is a custom IoC implementation in JavaScript. Purpose of this is to apply Dependency Inversion principle and avoid using mock utilities.
 
 # Case study #
-The following function has 2 concrete dependencies and the problem with this is that function like this can't be unit tested. Attempting to write a unit test for this would result in an integration test.
+Consider the following function:
 ```javascript
 async function getCurrentTemperature(zipCode){
     var thirdPartyApi = new ThirdPartyApi('some-api-key', 'some-api-secret');
@@ -12,6 +12,11 @@ async function getCurrentTemperature(zipCode){
     return temperature.now;
 }
 ```
+This function has 2 concrete dependencies:
+1. a ThirdPartyApi component
+1. a logging component (console)
+
+The problem with this is that function like this can't be unit tested. Attempting to write a unit test for this would result in an integration test.
 
 # Rewriting the function in order to be testable from an unit test
 
@@ -38,7 +43,6 @@ class IoC {
     return log;
   }
 }
-
 
 //-- start-up file
 IoC.log = console.log;
