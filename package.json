@@ -1,0 +1,34 @@
+{
+  "name": "ioc",
+  "version": "1.0.0",
+  "description": "Dependency Inversion in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx babel-node -- index.js",
+    "test": "npx mocha -- --require @babel/register -- --require @babel/polyfill tests/**/*.test.js"
+  },
+  "keywords": [
+    "dependency",
+    "inversion",
+    "ioc",
+    "mocking",
+    "javascript"
+  ],
+  "author": "Adrian Moraret",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/register": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-source-map-support": "^2.1.1",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "mocha": "^6.2.2"
+  }
+}
