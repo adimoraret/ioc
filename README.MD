@@ -18,7 +18,7 @@ This function has 2 concrete dependencies:
 
 The problem with this is that function like this can't be unit tested. Attempting to write a unit test for this would result in an integration test.
 
-# Rewriting the function in order to be testable from an unit test
+# Rewriting the function in order to be testable from a unit test
 
 Production code
 ```javascript
